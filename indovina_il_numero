@@ -1,0 +1,15 @@
+import random
+print("Indovina il numero casuale tra 1 e 100, con 10 tentativi..")
+numero = random.randint(1,100)
+tentativi = 0
+for i in range (1,11):
+  domanda = int(input("Che numero scegli?: "))
+  if domanda < numero:
+    print("Il numero casuale e' piu' grande..")
+  elif domanda > numero:
+    print("Il numero casuale e' piu' piccolo..")
+  else:
+    print(f"Hai indovinato in {i} tentativi..")
+    break
+else:
+  print(f"Hai esaurito i 10 tentativi! Game Over. Il numero era {numero}.")
